@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script src="./all.js"></script>
+  <script>
+    var data = '123456'
+    var key = '654321'
+    var pdata1 = CryptoJS.SHA1(data).toString();
+    var pdata2 = CryptoJS.HmacSHA1(data,key).toString();
+    console.log('SHA1加密:',pdata1);
+    console.log('hmacsha1加密：',pdata2);
+  </script>
+</body>
+</html>

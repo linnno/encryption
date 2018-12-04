@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script src="./all.js"></script>
+  <script>
+    var data = '123456';
+    var pdata1 = CryptoJS.enc.Utf8.parse(data)
+    var pdata = CryptoJS.enc.Base64.stringify(pdata1)
+    var words = CryptoJS.enc.Base64.parse(pdata);
+    var jdata = words.toString(CryptoJS.enc.Utf8)
+    console.log('加密：',pdata);
+    console.log('解密',jdata);
+  </script>
+</body>
+</html>
